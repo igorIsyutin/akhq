@@ -93,7 +93,7 @@ akhq:
         default.api.timeout.ms: 15000
 
   pagination:
-    page-size: 25
+    page-size: 15
     threads: 16
 
   topic:
@@ -111,7 +111,7 @@ akhq:
       - "^.*-changelog$"
       - "^.*-repartition$"
       - "^.*-rekey$"
-    skip-consumer-groups: false
+    skip-consumer-groups: true
 
   topic-data:
     sort: OLDEST

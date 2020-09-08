@@ -200,7 +200,7 @@ public class TopicController extends AbstractController {
     @Get("api/{cluster}/topic/{topicName}/groups")
     @Operation(tags = {"topic"}, summary = "List all consumer groups from a topic")
     public List<ConsumerGroup> groups(String cluster, String topicName) throws ExecutionException, InterruptedException {
-        return this.topicRepository.findByName(cluster, topicName, skipConsumerGroups).getConsumerGroups();
+        return this.topicRepository.findByName(cluster, topicName, false).getConsumerGroups();
     }
 
     @Get("api/{cluster}/topic/{topicName}/configs")
